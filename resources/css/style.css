@@ -22,6 +22,15 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1}
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /************************************/
 /* HEADER */
 /************************************/
@@ -30,6 +39,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/HeroB.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -258,14 +268,55 @@ h2:after {
 }
 
 
+/************************************/
+/* REUSABLE COMPONENTS */
+/************************************/
 
+.steps-box {
+}
 
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
 
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
 
+.app-screen {
+    width: 40%;
+}
 
+.works-step {
+    margin-bottom: 50px;
+}
 
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
 
+.works-step div {
+    color: #e74c3c;
+    border: 2px solid #e74c3c; 
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+    float: left;
+    margin-right: 25px;
+}
 
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
 
 
 
